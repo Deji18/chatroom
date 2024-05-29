@@ -10,8 +10,9 @@
       name="message"
       id="message"
     />
-    <button type="button" name="send" id="send-btn" onClick="sendMessage()">
-      Send
+    <input type="checkbox" id="public" />
+    <button type="submit" name="send" id="send-btn" onclick="sendMessage()">
+      send
     </button>
   </div>
 </div>
@@ -38,7 +39,8 @@
     createMessage(data.name, data.message);
   });
 
-  const sendMessage = () => {
+  const sendMessage = () => 
+  {
   const message = document.getElementById("message");
   if (message.value == "") return;
 
